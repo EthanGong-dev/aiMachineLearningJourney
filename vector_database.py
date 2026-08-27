@@ -9,7 +9,7 @@ client = chromadb.Client()
 
 
 # =========================
-# 2. Create a collection
+# 2. Create collection
 # =========================
 
 collection = client.create_collection(
@@ -41,10 +41,33 @@ collection.add(
 
 
 # =========================
-# 4. Check database
+# 4. User question
 # =========================
 
-print("Database created successfully!")
+question = input("\nAsk a question: ")
 
-print("Number of documents:",
-      collection.count())
+
+# =========================
+# 5. Search database
+# =========================
+
+results = collection.query(
+    query_texts=[question],
+    n_results=2
+)
+
+
+# =========================
+# 6. Display results
+# =========================
+
+print("\nMost relevant documents:")
+
+for document in results["documents"][0]:
+    print("-", document)
+
+
+print("\nDistances:")
+
+for distance in results["distances"][0]:
+    print(distance)

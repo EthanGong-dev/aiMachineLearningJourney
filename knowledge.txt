@@ -1,0 +1,21 @@
+UPM students can participate in hackathons during their studies.
+
+Students working in software engineering can develop projects
+using programming, artificial intelligence, databases, and web technologies.
+
+Artificial intelligence can be used to build intelligent applications,
+chatbots, recommendation systems, and data analysis tools.
+
+Machine learning is a branch of artificial intelligence that allows
+computers to learn patterns from data.
+
+RAG stands for Retrieval-Augmented Generation.
+RAG allows an AI system to retrieve relevant information from
+external knowledge sources before generating an answer.
+
+Embeddings convert text into numerical vectors.
+These vectors can be used to compare the semantic similarity
+between different pieces of text.
+
+A vector database stores embeddings and allows applications
+to search for information based on semantic similarity.
