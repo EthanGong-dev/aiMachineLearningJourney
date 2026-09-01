@@ -61,9 +61,34 @@ question = input("\nYou: ")
 
 results = collection.query(
     query_texts=[question],
-    n_results=2
+    n_results=5
 )
 
+distances = results["distances"][0]
+documents = results["documents"][0]
+
+
+threshold = 0.80
+
+
+filtered_documents = []
+
+
+for document, distance in zip(documents, distances):
+
+    print(f"\nDistance: {distance}")
+    print(f"Document: {document}")
+
+    if distance <= threshold:
+
+        filtered_documents.append(document)
+
+
+print("\nRelevant documents:")
+
+for document in filtered_documents:
+
+    print("-", document)
 
 # ==========================================
 # 8. Get retrieved documents
