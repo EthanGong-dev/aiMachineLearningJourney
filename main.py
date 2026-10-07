@@ -42,3 +42,21 @@ def ask_question(data: QuestionRequest):
         "answer": answer,
         "sources": documents
     }
+
+"""
+ingest.py
+   ↓
+"Masukkan knowledge"
+
+retriever.py
+   ↓
+"Cari knowledge"
+
+generator.py
+   ↓
+"Generate answer"
+
+main.py
+   ↓
+"Handle API"
+"""
